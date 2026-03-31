@@ -147,14 +147,14 @@ export default function Home() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <div className="lg:col-span-2 space-y-4">
+          <div className="min-w-0 space-y-4 lg:col-span-2">
             <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-4 shadow-sm">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                <div className="grid gap-2 sm:grid-cols-3 sm:items-center">
+              <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+                <div className="grid min-w-0 gap-2 sm:grid-cols-2 xl:grid-cols-3 sm:items-center">
                   <label className="grid gap-1">
                     <span className="text-xs opacity-70">Search</span>
                     <input
-                      className="h-10 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                      className="h-10 w-full min-w-0 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
                       placeholder="Search by name / id"
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
@@ -164,7 +164,7 @@ export default function Home() {
                   <label className="grid gap-1">
                     <span className="text-xs opacity-70">Sort by</span>
                     <select
-                      className="h-10 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                      className="h-10 w-full min-w-0 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
                     >
@@ -177,7 +177,7 @@ export default function Home() {
                   <label className="grid gap-1">
                     <span className="text-xs opacity-70">Order</span>
                     <select
-                      className="h-10 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                      className="h-10 w-full min-w-0 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
                       value={order}
                       onChange={(e) => setOrder(e.target.value)}
                     >
@@ -236,7 +236,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="min-w-0 space-y-4">
             <StudentForm
               form={form}
               loading={loading}

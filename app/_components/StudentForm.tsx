@@ -42,11 +42,11 @@ export function StudentForm({
         ) : null}
       </div>
 
-      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div className="mt-3 grid grid-cols-1 gap-3 xl:grid-cols-3">
         <label className="grid gap-1">
           <span className="text-xs opacity-70">ID</span>
           <input
-            className="h-10 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
+            className="h-10 w-full min-w-0 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
             value={form.id}
             onChange={(e) => onChange({ ...form, id: e.target.value })}
             placeholder="e.g. 101"
@@ -57,7 +57,7 @@ export function StudentForm({
         <label className="grid gap-1">
           <span className="text-xs opacity-70">Name</span>
           <input
-            className="h-10 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
+            className="h-10 w-full min-w-0 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
             value={form.name}
             onChange={(e) => onChange({ ...form, name: e.target.value })}
             placeholder="e.g. Sundar"
@@ -67,7 +67,7 @@ export function StudentForm({
         <label className="grid gap-1">
           <span className="text-xs opacity-70">Marks</span>
           <input
-            className="h-10 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
+            className="h-10 w-full min-w-0 rounded-xl border border-[color:var(--border)] bg-transparent px-3 outline-none focus:ring-2 focus:ring-indigo-500/30"
             value={form.marks}
             onChange={(e) => onChange({ ...form, marks: e.target.value })}
             placeholder="e.g. 95"

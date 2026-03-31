@@ -39,10 +39,10 @@ export function StudentsChart({ students }: Props) {
         <p className="text-xs opacity-60">Showing current page results</p>
       </div>
 
-      <div className="mt-3 h-64 w-full">
+      <div className="mt-3 h-64 w-full min-w-0">
         {mounted ? (
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData} margin={{ left: 8, right: 8 }}>
+          <ResponsiveContainer width="100%" height="100%" minWidth={240}>
+            <BarChart data={chartData} margin={{ left: 8, right: 8, top: 8 }}>
               <CartesianGrid strokeDasharray="3 3" opacity={0.25} />
               <XAxis dataKey="name" tick={{ fontSize: 11 }} interval={0} />
               <YAxis tick={{ fontSize: 11 }} />

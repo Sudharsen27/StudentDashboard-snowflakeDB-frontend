@@ -27,6 +27,11 @@ export async function apiJson<T>(
     const text = await res.text().catch(() => "");
     throw new Error(text || `Request failed (${res.status})`);
   }
-  return (await res.json()) as T;
+  const contentType = res.headers.get("content-type") || "";
+  if (contentType.includes("application/json")) {
+    return (await res.json()) as T;
+  }
+  const text = await res.text().catch(() => "");
+  return text as T;
 }
 
